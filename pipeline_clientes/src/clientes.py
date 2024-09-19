@@ -3,7 +3,7 @@ import random
 import pandas as pd
 
 
-def gera_clientes(data_dia):
+def gera_clientes(diretorio_csv, data_dia):
 
     fake = Faker("pt_BR") 
     concatid = 'ID'
@@ -21,7 +21,7 @@ def gera_clientes(data_dia):
 
     d = {"ID_CODE":idcode,"NOME":name,"CIDADE":city,"UF":state,"IDADE":age,"TELEFONE":phone_number,"CARGO":job,"EMPRESA":company}
     df = pd.DataFrame(d)
-    df.to_csv('Clientes_' + data_dia + '.csv', index = False, sep=';')
+    df.to_csv(diretorio_csv + 'Clientes_' + data_dia + '.csv', index = False, sep=';')
 
 if __name__ == "__main__":
     gera_clientes()
