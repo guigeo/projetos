@@ -9,7 +9,7 @@ import datetime
 dt = datetime.date.today()
 dt_str = dt.strftime('%Y%m%d')
 
-path="C:/meu_git/projetos/pipeline_clientes/data/"
+path="C:/git/projetos/pipeline_clientes/data/"
 
 def main():
     start_time = timeit.default_timer()
